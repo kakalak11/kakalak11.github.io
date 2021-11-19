@@ -37,7 +37,7 @@ const cards = [];
 
 let checkCards = [];
 let temp = [];
-var coin = 1000;
+var coin = 10000;
 
 //Create an array holds all the cards
 for (let i = 0; i < 20; i++) {
