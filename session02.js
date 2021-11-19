@@ -129,6 +129,7 @@ function updateCoin() {
     text.style.position = "absolute";
     text.style.top = " 550px";
     text.innerHTML = "Coin: " + coin;
+    text.style.backgroundColor = "white";
 }
 
 function gameStart() {
