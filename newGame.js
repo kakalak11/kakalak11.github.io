@@ -71,10 +71,13 @@ function addElement(cover, i, j, cardIndex) {
 }
 
 let countWin = 0;
+let isDeleted;
 
 function onClickFunction() {
-    if (canClick) {
-        let index = this.index;
+    let index = this.index;
+    isDeleted = cardList[index].del;
+    console.log(isDeleted);
+    if (canClick && !isDeleted) {
         temp.push(cardList[index]);
         this.children[0].hide();
         this.open();

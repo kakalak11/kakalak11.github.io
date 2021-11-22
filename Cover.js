@@ -4,13 +4,13 @@ export class Cover extends Node {
         //Need img source
         super();
         this.image = image;
+        this._deleted = false;
         this.view.style.backgroundColor = "orange";
         this.view.style.width = "88px";
         this.view.style.height = "88px";
         this.view.style.border = "2px solid black";
         this.view.style.backgroundRepeat = "no-repeat";
         this._index;
-        this._deleted;
     }
 
     //Cover have 3 state, show || hide && delete, logic is in the newGame
