@@ -7,11 +7,9 @@ export class Label extends Node {
         this.string = this._string;
         this.view.style.color = 'black';
         this.view.style.fontSize = "30px";
-        this.view.style.visibility = "visible";
-        this.view.style.cursor = "default";
-        this.view.style.textAlign = "center";
-        this.y = 25;
+        this.view.style.cursor = "pointer";
         this.x = 30;
+        this.y = 30;
     }
 
     get string() {
@@ -22,11 +20,14 @@ export class Label extends Node {
         this._string = value;
         this.view.innerHTML = this._string;
     }
-
-    open() {
-        this.view.style.visibility = "visible";
-    }
-    hide() {
-        this.view.style.visibility = "hidden";
-    }
+    // display() {
+    //     if (this._active) {
+    //         this.view.style.display = "none";
+    //     }
+    // }
+    // hide() {
+    //     if (this._active) {
+    //         this.view.style.display = "initial";
+    //     }
+    // }
 }

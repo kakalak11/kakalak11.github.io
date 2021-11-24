@@ -8,9 +8,7 @@ export class Node {
         this.children = [];
         this.initView();
         this.view.style.position = "absolute";
-
-        // Create an ID to manage the Node's property
-        // this._index = 0;
+        this.view.style.opacity = this._opacity;
     }
     get x() {
         return this._x;
@@ -26,18 +24,32 @@ export class Node {
         this._y = value;
         this.view.style.top = this._y + 'px';
     }
-    // set index(value) {
-    //     this._index = value;
-    // }
-    // get index() {
-    //     return this._index;
-    // }
-
+    get index() {
+        return this.children[1];
+    }
+    get active() {
+        return this._active;
+    }
     initView() {
         this.view = document.createElement('div');
     }
-    addChild(node){
+    addChild(node) {
         this.children.push(node);
         this.view.appendChild(node.view);
+    }
+    display() {
+        if (this._active) {
+            this.view.style.display = "none";
+        }
+    }
+    hide() {
+        if (this._active) {
+            this.view.style.display = "initial";
+        }
+    }
+    delete() {
+        this._active = false;
+        this.view.style.display = "none";
+        // this.view.style.backgroundColor = "black";
     }
 }
