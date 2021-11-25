@@ -20,7 +20,7 @@ export class Game extends Node {
     startGame() {
         let nodes = [];
         let countWin = 0;
-        let coin = 10000;
+        let coin = 1000;
         let index = 0;
         let temp = [];
         let canClick = false;
