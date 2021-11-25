@@ -78,6 +78,7 @@ export class Manager extends Node {
             element.view.addEventListener("click", _onClickCard);
         });
         function onClickCard() {
+            //need optimize
             if (canClick) {
                 console.log("clicked", this);
                 temp.push(this);
@@ -136,7 +137,7 @@ export class Manager extends Node {
 
         function update(board, coin, value) {
             board.children[0].string = coin + value;
-
+            console.log(this.change);
             let change = new Change();
             board.addChild(change);
 

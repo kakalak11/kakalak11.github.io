@@ -1,6 +1,5 @@
 import { Node } from "./Node.js";
 import { Label } from "./Label.js";
-import { Game } from "./Game.js";
 import { Manager } from "./GameManager.js";
 
 function createMenu() {
@@ -13,10 +12,10 @@ function createMenu() {
     let resetButton = new Reset();
     let _onClickReset = onClickReset.bind(manager);
     resetButton.view.addEventListener("click", _onClickReset);
-    
+
     menu.addChild(startButton);
     menu.addChild(resetButton);
-    
+
     function Menu() {
         let menu = new Node();
         menu.view.style.backgroundColor = "black";
@@ -26,7 +25,7 @@ function createMenu() {
         menu.height = 100;
         return menu;
     }
-    
+
     function Start() {
         let startButton = new Label("START");
         startButton.y = 30;
@@ -35,7 +34,7 @@ function createMenu() {
         startButton.view.style.border = "2px solid white";
         return startButton;
     }
-    
+
     function Reset() {
         let resetButton = new Label("RESET");
         resetButton.y = 30;
